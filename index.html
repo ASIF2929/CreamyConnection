@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../fontawesome-free-6.5.2-web/css/all.min.css">
+  <title>CreamyConnection</title>
+</head>
+<style>
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  .listbtn{
+    margin: 10px;
+    width: 200px;
+  }
+  .listmenu a{
+    margin: 0 25px;
+  }
+  .listmenu{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card{
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+  }
+  .card img{
+    width: 200px;
+    margin:5px auto;
+    border-radius: 5px;
+  }
+  .card-text p{
+    text-align: justify;
+  }
+  .card-title h1{
+    text-align: center;
+  }
+  .nav-item{
+    margin: 0 20px;
+  }
+
+  @media only screen and (max-width:992px){
+    .listmenu ,.listbtn{
+      display: none;
+    }
+    .fa-whatsapp{
+      font-size: 40px !important;
+      left: 90% !important;
+      top:92% !important;
+    }
+    #aboutusimg{
+      padding: 5px !important;
+    }
+    .row{
+      margin: 0 25px !important;
+    }
+    #carouselExampleCaptions{
+      width: 80% !important;
+    }
+    .aboutus{
+      padding: 5px 0 !important;
+    }
+  }
+</style>
+
+<body>
+  <!-- header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top" style="margin: auto; font-size: 20px;">
+    <div class="container-fluid">
+      <img src="./images/Designer.png" alt="logo" width="50" style="border-radius: 40px 20px;">
+      <a class="navbar-brand" href="#">CreamyConnection</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin: 0 auto;padding: 5px 20px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle active" href="#products" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#Milk">Milk</a></li>
+              <li><a class="dropdown-item" href="#curd">Curd</a></li>
+              <li><a class="dropdown-item" href="#ghee">Ghee</a></li>
+              <li><a class="dropdown-item" href="#paneer">Paneer</a></li>
+              <li><a class="dropdown-item" href="#buttermilk">Butter Milk</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#aboutus">About Us</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Mail id</label>
+              <input type="text" class="form-control" required id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <a href="https://wa.me/8121123666?" target="_blank" class="whatsup"> <i class="fa-brands fa-whatsapp position-sticky" style="color: green; position: relative;top:90%;left:95% ;z-index: 3000;font-size: 75px;"></i>
+  </a>
+  <!-- carousel -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="width: 63%; margin: 120px auto;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/carousel-2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Nourishing Milk from Healthy Cows</h5>
+          <p>Experience the wholesome goodness of milk, sourced from our healthy cows, nurtured with love and care for your well-being.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/carousel-3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Clean and Safe Milk Processing</h5>
+          <p>Our milk is processed and packaged under the highest standards of cleanliness and safety, ensuring you receive nothing but the freshest milk.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/carousel-1" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Cows Flourishing in Healthy Environments</h5>
+          <p>Our cows thrive in clean, green pastures, ensuring the milk they produce is as pure and healthy as the environment they live in.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- products -->
+  <h1 style="display: flex; justify-content: center; text-decoration: underline;padding: 5px 30px; margin: 50px;" id="products">Our Products</h1>
+  <div class="listmenu">
+    <a href="#Milk" class="listbtn btn btn-light">Milk</a>
+    <a href="#curd" class="listbtn btn btn-light">Curd</a>
+    <a href="#ghee" class="listbtn btn btn-light">Ghee</a>
+    <a href="#paneer" class="listbtn btn btn-light">Paneer</a>
+    <a href="#buttermilk" class="listbtn btn btn-light">Butter Milk</a>
+  </div>
+  <h2 style="display: flex; justify-content: center; text-decoration: underline;padding: 5px 30px;" id="Milk">Milk</h2>
+<!-- milk -->
+  <div class="row" style="margin: 50px;">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mb-5 shadow-sm">
+        <img src="./images/milk (1).png" alt="" class="img-fluid">
+        <div class="card-body">
+          <div class="card-title">
+            <h1>Full-Cream Milk</h1>
+          </div>
+          <div class="card-text">
+            <p>For children up to the age of 2 years, full-cream milk is recommended.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".Fmilk">Read More
+            </button>
+              <!-- Modal -->
+            <div class="modal fade Fmilk" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Full-Cream Milk</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Full-Cream milk is a nutritious dairy product made from the milk of Cows. Let’s explore its nutritional value and benefits:
+                      <br>
+                      Nutritional Composition of Full-Cream Milk (per 100 grams):
+                      <ul>
+                        <li>Energy	89 Kcal</li>
+                        <li>Carbohydrates	5.10 g</li>
+                        <li>Added Sugar	0.00 g</li>
+                        <li>Protein: 3.30 grams</li>
+                        <li>Fat: 6.10 grams</li>
+                        <li>Lactose: 13 grams</li>
+                        <li>Calcium: 150mg</li>
+                      </ul>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mb-5 shadow-sm">
+        <img src="./images/milk (4).png" alt="" class="img-fluid">
+        <div class="card-body">
+          <div class="card-title">
+            <h1>Standardized Milk</h1>
+          </div>
+          <div class="card-text">
+            <p>Milk is an excellent source of vitamins and minerals, particularly calcium. </p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".Smilk">Read More
+            </button>
+              <!-- Modal -->
+            <div class="modal fade Smilk" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Standardized Milk</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      This type of milk is Standardized milk. It contains 4.2% of fat. A cup of toned milk has around 72 calories.
+                      <br>
+                      Nutritional Composition of Toned Milk (per 100 grams):
+                      <ul>
+                        <li>Calories	72kcal</li>
+                        <li>Carbohydrates: 12 grams</li>
+                        <li>Protein: 8.14grams</li>
+                        <li>Fat: 8 grams</li>
+                      </ul>
+                    </p>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mb-5 shadow-sm">
+        <img src="./images/milk (3).png" alt="" class="img-fluid">
+        <div class="card-body">
+          <div class="card-title">
+            <h1>Toned Milk</h1>
+          </div>
+          <div class="card-text">
+            <p>Toned milk is low fat milk ccontains 3% of fat in 1 cup of milk. <br> A cup of toned milk has around 150 calories.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".Tmilk">Read More
+            </button>
+              <!-- Modal -->
+            <div class="modal fade Tmilk" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Toned Milk</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      This type of milk is regular toned milk. It contains 3% of fat. A cup of toned milk has around 150 calories.
+                      <br>
+                      Nutritional Composition of Toned Milk (per 100 grams):
+                      <ul>
+                        <li>Calories	58kcal</li>
+                        <li>Carbohydrates: 4 grams</li>
+                        <li>Protein: 3 grams</li>
+                        <li>Fat: 4 grams</li>
+                      </ul>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mb-5 shadow-sm">
+        <img src="./images/milk (2).png" alt="" class="img-fluid">
+        <div class="card-body">
+          <div class="card-title">
+            <h1>Buffalo Milk</h1>
+          </div>
+          <div class="card-text">
+            <p>Buffalo milk has a high nutritional value and is used to produce dairy products like butter, yogurt, cheese, and ice cream</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".bmilk">Read More
+            </button>
+              <!-- Modal -->
+            <div class="modal fade bmilk" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Buffalo Milk</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Buffalo Milk is a nutritious Milk from the milk of water buffaloes. Lets explore its nutritional value and benefits:
+                      <br>
+                      Nutritional Composition of Buffalo Milk (per 100 grams):
+                      <ul>
+                        <li>Calories	237kcal</li>
+                        <li>Water	83%</li>
+                        <li>Carbohydrates: 12 grams</li>
+                        <li>Protein: 9 grams</li>
+                        <li>Fat: 17 grams</li>
+                        <li>Lactose: 13 grams</li>
+                        <li>Calcium: Provides 32% of the Daily Value (DV)</li>
+                      </ul>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- curd -->
+  <h2 style="display: flex; justify-content: center; text-decoration: underline;padding: 5px 30px;" id="curd">Curd</h2>
+  <div class="row" style="margin: 50px;">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mb-5 shadow-sm">
+        <img src="./images/curd (2).png" alt="" class="img-fluid">
+        <div class="card-body">
+          <div class="card-title">
+            <h1>Cow Curd</h1>
+          </div>
+          <div class="card-text">
+            <p>
+              Cow curd is a traditional type of yogurt prepared from Inndian Cow milk
+            </p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".cowcurd">Read More
+            </button>
+              <!-- Modal -->
+            <div class="modal fade cowcurd" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Cow Curd</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Curd, is a traditional yogurt or fermented milk product that has been enjoyed throughout the Indian subcontinent for centuries.
+                      <br>
+                      Here, the nutritional content of 100 grams of curd is as follows:
+                      <ul>
+                        <li>Calories: 98 kcal</li>
+                        <li>Total Fat: 4.3 grams (Saturated fat: 1.7 grams)</li>
+                        <li>Cholesterol: 17 milligrams</li>
+                        <li>Protein: 11 grams</li>
+                        <li>Carbohydrates: 3.4 grams</li>
+                        <li>Sodium: 315 milligrams</li>
+                        <li>Potassium: 104 milligrams</li>
+                        <li>Calcium: 83 milligrams</li>
+                        <li>Phosphorus: 159 milligrams</li>
+                        <li>Zinc: 0.4 milligrams</li>
+                        <li>Vitamin C: 0</li>
+                        <li>Water: 79.8 grams</li>
+                      </ul> 
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mb-5 shadow-sm">
+        <img src="./images/curd (1).png" alt="" class="img-fluid">
+        <div class="card-body">
+          <div class="card-title">
+            <h1>Buffalo Curd</h1>
+          </div>
+          <div class="card-text">
+            <p>Buffalo curd is a traditional type of yogurt prepared from water buffalo milk</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".Bcurd">Read More
+            </button>
+              <!-- Modal -->
+            <div class="modal fade Bcurd" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Buffalo Curd</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Buffalo curd is a nutritious dairy product made from the milk of water buffaloes. Let’s explore its nutritional value and benefits:
+                      <br>
+                      Nutritional Composition of Buffalo Curd (per 100 grams):
+                      <ul>
+                        <li>Calories: Approximately 237 kcal</li>
+                        <li>Water Content: About 83%</li>
+                        <li>Carbohydrates: 12 grams</li>
+                        <li>Protein: 9 grams</li>
+                        <li>Fat: 17 grams</li>
+                        <li>Lactose: 13 grams</li>
+                        <li>Calcium: Provides 32% of the Daily Value (DV)</li>
+                        <li>Phosphorus: Provides 41% of the DV</li>
+                        <li>Magnesium: Provides 19% of the DV</li>
+                        <li>Vitamin A: Provides 14% of the DV</li>
+                      </ul>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="display: flex; justify-content: center; text-decoration: underline;padding: 5px 30px;" id="ghee">Ghee</h2>
+  <div class="row" style="margin: 50px;">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mb-5 shadow-sm">
+        <img src="./images/ghee (1).png" alt="" class="img-fluid">
+        <div class="card-body">
+          <div class="card-title">
+            <h1>Cow Ghee</h1>
+          </div>
+          <div class="card-text">
+            <p>
+              Traditional Indian cooking fat made from cow's milk. 
+            </p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".ghee1">Read More
+            </button>
+              <!-- Modal -->
+            <div class="modal fade ghee1" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Cow Ghee</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Cow ghee, also known as clarified butter, is a traditional Indian cooking fat made from cow’s milk. It is rich in flavor, has a high smoke point, and is commonly used in Indian cuisine.
+                      <ul>
+                        <li>Calories: 130</li>
+                        <li>Fat: 15g</li>
+                        <li>Sodium: 0mg</li>
+                        <li>Carbohydrates: 0g</li>
+                        <li>Fiber: 0g</li>
+                        <li>Sugars: 0g</li>
+                        <li> Protein: 0g</li>
+                        <li> Vitamin A: 107.5mcg</li>
+                        <li> Vitamin E: 0.4mg</li>
+                        <li>Vitamin K: 1.1mcg</li>
+                      </ul>
+                      Cow ghee is revered for its health benefits and is believed to promote digestion, boost immunity, and enhance overall well-being. 🐄🥣🌿
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mb-5 shadow-sm">
+        <img src="./images/ghee (2).png" alt="" class="img-fluid">
+        <div class="card-body">
+          <div class="card-title">
+            <h1>Buffalo Ghee</h1>
+          </div>
+          <div class="card-text">
+            <p>Traditional Indian cooking fat made from Buffalo's milk. 
+            </p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".ghee2">Read More
+            </button>
+              <!-- Modal -->
+            <div class="modal fade ghee2" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Buffalo Ghee</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      <ul>
+                        <li>Calories: 299 kcal</li>
+                        <li>Protein: 18 grams</li>
+                        <li>Total Fat: 24 grams</li>
+                        <li>Saturated Fat: 13 grams</li>
+                        <li>Trans Fat: 0.8 grams</li>
+                        <li>Polyunsaturated Fat: 1.1 grams</li>
+                        <li>Monounsaturated Fat: 6 grams</li>
+                        <li>Cholesterol: 69 mg</li>
+                        <li>Sodium: 751 mg</li>
+                        <li>Total Carbohydrates: 3 grams</li>
+                        <li>Dietary Fiber: 0 grams</li>
+                        <li>Sugars: 2.3 grams</li>
+                        <li>Vitamin D: 2.7 mcg</li>
+                        <li>Calcium: 566 mg</li>
+                        <li>Iron: 0.2 mg</li>
+                        <li>Potassium: 129 mg</li>
+                      </ul>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="display: flex; justify-content: center; text-decoration: underline;padding: 5px 30px;" id="paneer">Paneer</h2>
+  <div class="row" style="margin:5px 50px;">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mb-5 shadow-sm">
+        <img src="./images/paneer.jpg" alt="" class="img-fluid">
+        <div class="card-body">
+          <div class="card-title">
+            <h1>Paneer</h1>
+          </div>
+          <div class="card-text">
+            <p>
+              Paneer is a nutrient-rich food that provides a variety of macronutrients and micronutrients.
+            </p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".paneer">Read More
+            </button>
+              <!-- Modal -->
+            <div class="modal fade paneer" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Paneer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Paneer is a nutrient-rich food that provides a variety of macronutrients and micronutrients. Here’s the nutritional content of paneer per 100 grams:
+                      <ul>
+                        <li>Calories: 299 kcal</li>
+                        <li>Protein: 18 grams</li>
+                        <li>Total Fat: 24 grams</li>
+                        <li>Saturated Fat: 13 grams</li>
+                        <li>Trans Fat: 0.8 grams</li>
+                        <li>Polyunsaturated Fat: 1.1 grams</li>
+                        <li>Monounsaturated Fat: 6 grams</li>
+                        <li>Cholesterol: 69 mg</li>
+                        <li>Sodium: 751 mg</li>
+                        <li>Total Carbohydrates: 3 grams</li>
+                        <li>Dietary Fiber: 0 grams</li>
+                        <li>Sugars: 2.3 grams</li>
+                        <li>Vitamin D: 2.7 mcg</li>
+                        <li>Calcium: 566 mg</li>
+                        <li>Iron: 0.2 mg</li>
+                        <li>Potassium: 129 mg</li>
+                      </ul>
+                      Paneer is a good choice for proteins, especially in a vegetarian diet. With a biological value of protein being 80-86%, it contains all the nine essential amino acids2. It’s also a rich source of calcium and phosphorus, which are essential for bone health34. Please note that these values can vary based on the specific preparation method and the type of milk used. Enjoy your paneer! 😊
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <h2 style="display: flex; justify-content: center; text-decoration: underline;padding: 5px 30px;" id="buttermilk">Butter Milk</h2>
+  <div class="row" style="margin: 5px 50px;">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mb-5 shadow-sm">
+        <img src="./images/buttermilk.png" alt="Image not found" class="img-fluid">
+        <div class="card-body">
+          <div class="card-title">
+            <h1>Butter Milk</h1>
+          </div>
+          <div class="card-text">
+            <p>Buttermilk is a drink made from the bacterial fermentation of milk using a lactic acid-producing culture</p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".butrmlk">Read More
+            </button>
+              <!-- Modal -->
+            <div class="modal fade butrmlk" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Butter Milk</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Buttermilk is a drink made from the bacterial fermentation of milk using a lactic acid-producing culture. <br>
+
+                      Compared to milk, buttermilk has a thicker consistency and a slightly sour taste. <br>
+                      
+                      However, buttermilk is very close to regular milk in nutritional value. <br>
+                      
+                      Here are the nutritional properties for buttermilk made from whole milk, per 245-gram cup: <br>
+                      <ul>
+                        <li> Calories: 152 kcal</li>
+                        <li>Carbohydrate: 12g</li>
+                        <li>Sugars: 12g</li>
+                        <li>Fat: 8.11g</li>
+                        <li>Saturated fat: 4.66g</li>
+                        <li>Monounsaturated fat: 2.03g</li>
+                        <li>Polyunsaturated fat: 0.49g</li>
+                        <li>Protein: 7.86g</li>
+                        <li>Protein per 100 calories: 3.6 grams</li>
+                      </ul>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About us -->
+  <div class="aboutus shadow" style="width: 90%; margin: 0 auto;padding: 40px; text-align: justify;">
+    <h1 style="display: flex; justify-content: center; text-decoration: underline;padding: 5px 30px; margin: 50px;" id="aboutus">About Us</h1>
+    <img src="./images/aboutus.jpg" id="aboutusimg" class="rounded-3 mx-auto d-block" alt="Image Not Found" style="width: 100%;margin: 10px auto; padding: 50px;">
+    <h2 style="display: flex; justify-content: center; text-decoration: underline;padding: 5px 30px;margin-top: 30px;">Who Are We?</h2>
+
+    <p style="text-align: justify; margin: 10px 40px;">At <b>CreamConnect</b> we believe in the power of purity. Our journey began with a simple desire: to connect people with the wholesome goodness of milk and milk products. 
+
+      Our story is one of passion and dedication, rooted in our commitment to delivering the highest quality dairy products to our customers. We source our milk from the finest, ethically managed farms, ensuring that every drop is as pure as nature intended.
+      
+      Our range of products extends beyond just milk. We offer a variety of dairy delights, including cheese, yogurt, butter, and more, each crafted with care and precision. We are proud to say that our products are free from artificial preservatives and additives, keeping the natural taste and nutrition intact.
+      
+      At <b>CreamConnect</b>, we're not just about dairy. We're about creating connections - between farmers and families, tradition and innovation, and most importantly, between nature and you. 
+      
+      Join us on this journey of taste and trust. Welcome to <b>CreamConnect</b> - your gateway to nature's best.
+      </p>
+  </div>  
+  <!-- Blog -->
+  <h1 style="display: flex; justify-content: center; text-decoration: underline;padding: 5px 30px; margin: 50px;" id="blogs">Blog</h1>
+  <div class="blog shadow" style="width: 90%; margin: 0 auto;padding: 40px; text-align: justify;">
+    <h2 style="font-weight: bolder;">CreamConnect: A Dairy Delight 🥛🧀</h2>
+    <h3 style="font-weight: bold;">Introduction</h3>
+    <p>
+      Welcome to the world of **CreamConnect**, where dairy goodness meets innovation! CreamConnect is a brand that prides itself on delivering high-quality milk products straight from the farm to your table. Let's dive into the creamy details of their offerings.
+    </p>
+    <h3 style="font-weight: bold;">The CreamConnect Range</h3>
+    <h4>1.Creamy Milk 🥛</h4>
+    <ul>
+      <li>CreamConnect's fresh cow's milk is sourced from healthy, well-cared-for cows.</li>
+      <li>It undergoes minimal processing to retain its natural flavor and nutrients.</li>
+      <li>Whether you're enjoying it with cereal or sipping it cold, Creamy Milk is a wholesome choice.</li>
+    </ul>
+   <h4>2.Velvety Yogurt🍶</h4>
+   <ul>
+    <li>CreamConnect's yogurt is a velvety delight.</li>
+    <li>Made from the same high-quality milk, it's fermented to perfection.</li>
+    <li>Enjoy it plain, with fruits, or as a base for smoothies.</li>
+   </ul>
+   <h4>3.Butter Bliss 🧈</h4>
+   <ul>
+    <li>CreamConnect churns out rich, golden butter.</li>
+    <li>Spread it on warm toast or use it for baking—the flavor is unmatched.</li>
+   </ul>
+   <h4>4.Ghee Goodness🌟</h4>
+   <ul>
+    <li>CreamConnect's ghee (clarified butter) is a kitchen essential.</li>
+    <li>It's made using traditional methods, resulting in a fragrant, golden elixir.</li>
+    <li>Use it for cooking, drizzling over rice, or even in your morning coffee.</li>
+   </ul>
+   <h4>5.Cheese Creations 🧀</h4>
+   <ul>
+    <li>CreamConnect's cheese range includes classics like cheddar, mozzarella, and paneer.</li>
+    <li>Their artisanal approach ensures each bite is a burst of flavor.</li>
+   </ul>
+   <h2 style="font-weight: bolder;">Farm-to-Table Philosophy</h3>
+   <h4>CreamConnect believes in transparency and sustainability:</h4>
+   <ul>
+    <li><b>Happy Cows:</b> Their cows graze freely, ensuring the best quality milk.</li>
+    <li><b>Hygienic Processing:</b>State-of-the-art facilities maintain hygiene standards.</li>
+    <li><b>Local Impact:</b>CreamConnect supports local farmers and communities.
+    </li>
+   </ul>
+    <h2 style="font-weight: bolder;">Recipes and Tips</h3>
+
+   <h4>Explore CreamConnect's website for delightful recipes:</h4>
+    <ul>
+      <li>Creamy Milkshakes</li>
+      <li>Yogurt Parfaits</li>
+      <li>Ghee-infused Curries</li>
+      <li>Cheesy Delights</li>
+   </ul>
+
+    <h2 style="font-weight: bolder;">Conclusion</h2>
+    <p>
+      CreamConnect isn't just about dairy; it's about connecting people to wholesome, nourishing food. So, pour a glass of Creamy Milk, savor some yogurt, and let the goodness flow! 🐄✨ <br>
+      Remember, when it comes to CreamConnect, it's not just milk—it's a creamy connection! 🥛❤️
+    </p>
+  </div>
+
+
+  <!-- footer -->
+  <footer class="bd-footer py-5 mt-5 bg-light">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-3 mb-3">
+          <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+            <img src="./images/Designer.png" width="50" height="40" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+            <span class="fs-5">CreamyConnect</span>
+          </a>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2">Designed and built with all the love in the world by the <a href="#">CreamyConnection team</a> with the help of our contributors.</li>
+            <li class="mb-2">connect with <a href="mailto:asif.asse@gmail.com">mail</a> or call at <a href="tel:+916364612812">(+91) 6364612812</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#">Home</a></li>
+            <li class="mb-2"><a href="#products">Products</a></li>
+            <li class="mb-2"><a href="#blogs">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Store Locator</h5>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.905489047007!2d77.71589011370959!3d12.964608509011846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f35d0dfc83%3A0x30cfa512d80115f9!2sWhitefield%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1714760528892!5m2!1sen!2sin" width="100%" height="100%" style="border:0; padding: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Community</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#">Instagram</a></li>
+            <li class="mb-2"><a href="#">Facebook</a></li>
+            <li class="mb-2"><a href="#">Corporate sponsors</a></li>
+            <li class="mb-2"><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
